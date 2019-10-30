@@ -4,10 +4,16 @@ const routes = require('./routes');
 
 const app = express();
 
-mongoose.connect('mongodb://192.168.99.100:27017/ana', {
+// mongoose.connect('mongodb://192.168.99.100:27017/ana', {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+// });
+
+mongoose.connect('mongodb+srv://aninha:aninha@cluster0-pvhne.mongodb.net/omnistack?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
+
 
 // req.query -> Acessar query params
 // req.parms -> Acessar routes params (para edição, delete)
